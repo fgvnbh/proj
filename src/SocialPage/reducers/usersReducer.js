@@ -12,10 +12,10 @@ const reducer = handleActions(
             ...state,
             fetchingState: FETCH_STATUS.IS_FETCHING
         }),
-        [appActionCreators.app.users.FETCH_SUCCESS]: (state,action) => ({
+        [appActionCreators.app.users.fetchSuccess]: (state,action) => ({
             ...state,
             fetchingState: FETCH_STATUS.FETCHED_DATA,
-            users: [...action.payload.users]
+            users: [...action.payload.users],
         }),
         [appActionCreators.app.users.FETCH_FAILURE]: (state,action) => ({
             ...state,

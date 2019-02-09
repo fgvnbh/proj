@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-const RawLoginForm = props => {
-    // const {logIn,hideModalForm}=props;
+const LoginForm = props => {
+    // const {logIn}=props;
     let userName,userPass;
     return (
         <div className='login-form'>
@@ -32,23 +32,7 @@ const RawLoginForm = props => {
                 </Grid.Column>
             </Grid>
         </div>
-        // <form>
-        //     <div>
-        //         <label >
-        //             Login:
-        //             <input  type="text" name="login" ref={node=>userName=node} required placeholder="Введіть логін"/>
-        //         </label>
-        //     </div>
-        //     <div>
-        //         <label >
-        //             Password:
-        //             <input type="password" name="password" ref={node=>userPass=node} required placeholder="Введіть паррль"/>
-        //         </label>
-        //     </div>
-        //     <button onClick={(e)=>{e.preventDefault(); logIn(userName.value,userPass.value)}}>Увійти</button>
-        //     <button onClick={(e)=>{e.preventDefault(); hideModalForm();}}>Гість</button>
-        // </form>
     );
 };
 
-export default RawLoginForm;
+export default LoginForm;

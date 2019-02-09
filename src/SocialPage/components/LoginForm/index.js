@@ -1,8 +1,8 @@
 import React from 'react';
-import RawLoginForm from './RawLoginForm'
+import LoginForm from './LoginForm'
 const LoginForm = props => {
     return (
-        <RawLoginForm {...props}/>
+        <LoginForm {...props}/>
     );
 };
 export default LoginForm;

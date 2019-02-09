@@ -1,18 +1,9 @@
 import React, {PureComponent} from 'react';
 import Table from './Table'
 
-class WrappedTable extends PureComponent {
-    onItemClick=(id)=>{
-        console.log("onItemClick2 = "+id);
-        this.props.history.push(`/users/${id}`);
-    };
-    render() {
+const UsersTable = props => {
         return (
-            <Table {...this.props} onItemClick={this.onItemClick}/>
+            <Table {...props} />
         );
-    }
 };
-
-WrappedTable.propTypes = {};
-
-export default WrappedTable;
+export default UsersTable;

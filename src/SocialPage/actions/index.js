@@ -21,7 +21,6 @@ const appActionCreators=createActions({
             IS_AUTHORIZED:undefined,
             IS_NOT_AUTHORIZED:undefined,
         },
-        SHOW_MODAL:undefined
     }
 
 });

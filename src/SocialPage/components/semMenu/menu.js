@@ -3,19 +3,14 @@ import {Menu} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 
 export default class MenuExampleTabularOnLeft extends Component {
-    state = { activeItem: 'home' }
-
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
     render() {
-        const { activeItem } = this.state
-
         return (
             <Menu pointing secondary horizontal>
-                <Menu.Item name='HOME' as={Link} to="/" />
+                {/*<Menu.Item name='ME' as={Link} to="/" />*/}
                 <Menu.Item
                     name='USERS'
                     as={Link} to="/users"
+                    onClick={()=>{this.props.fetchRequest()}}
                 />
                 <Menu.Item
                     name='ABOUT'

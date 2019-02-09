@@ -1,14 +1,9 @@
 import React from 'react';
+import "semantic-ui-css/semantic.min.css";
+
 const Row = props => {
-    const {name, age, _id, description, photoURL,onItemClick} = props;
-    // const onClick=(e) => {
-    //     e.preventDefault();
-    //     console.log('onItemClick : '+_id);
-    //     onItemClick(_id);
-    // };
+    const {name, age, _id, description, photoURL} = props;
     return (
-        <tr>
-            <td>
                 <div className="ui card">
                     <div className="image">
                         <img src={photoURL}/>
@@ -29,18 +24,7 @@ const Row = props => {
                         </a>
                     </div>
                 </div>
-                {/*<img src={photoURL} alt="PHOTO"/>*/}
-            {/*</td>*/}
-            {/*<td>*/}
-                {/*<a onClick={onClick}>{name}</a>*/}
-            {/*</td>*/}
-            {/*<td>*/}
-                {/*{description}*/}
-            {/*</td>*/}
-            {/*<td>*/}
-                {/*{age}*/}
-            </td>
-        </tr>
+
     );
 };
 

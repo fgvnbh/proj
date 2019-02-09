@@ -9,20 +9,11 @@ const mapStateToProps = state => ({
     users: state.users.users,
     error: state.users.error,
     fetchingState: state.users.fetchingState,
-    isAuthorized: state.user.isAuthorized,
-    showModal: state.showModal.showModal,
-    childComponent: state.showModal.childComponent
 });
 
 const mapDispatchToProps = dispatch => ({
     sendForm: (values) => dispatch(appActionCreators.app.addForm.sendForm({values})),
-    logOut: () => dispatch(appActionCreators.app.user.logOut()),
-    logIn: (username, password) => {
-        dispatch(appActionCreators.app.user.logIn({username, password}));
-    },
-    showModalForm: (childComponent) => dispatch(appActionCreators.app.showModal({showModal: true, childComponent})),
-    hideModalForm: () => dispatch(appActionCreators.app.showModal({showModal: false, childComponent: null})),
-    loadData: () => store.dispatch(appActionCreators.app.universities.fetchRequest())
+    fetchRequest: () => store.dispatch(appActionCreators.app.users.fetchRequest()),
 });
 
 let ConnectedUsersViewer = connect(

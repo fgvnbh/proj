@@ -1,4 +1,4 @@
-import {takeEvery, put} from 'redux-saga/effects';
+import {takeEvery, put, take} from 'redux-saga/effects';
 import axios from 'axios';
 import config from '../../config/index.json'
 import store from '../store'
@@ -7,11 +7,12 @@ import appActionCreators from '../actions/index'
 function* fetchUsers() {
     try {
         axios.get(config['api_url'] + '/api/users')
-            .then(response => response.data)
+            .then(response =>response.data)
             .then(users => {
                 store.dispatch(appActionCreators.app.users.fetchSuccess({users}))
             })
             .catch(error => {
+                console.log('error');
                 store.dispatch(appActionCreators.app.users.fetchFailure({error}))
             })
     } catch (error) {
